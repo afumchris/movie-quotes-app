@@ -5,7 +5,12 @@
 # Learn more from ready-to-use templates: https://www.gitpod.io/docs/introduction/getting-started/quickstart
 
 tasks:
-  - init: npm install && npm run build
-    command: npm run start
+  - init: |
+      cd frontend-react-js
+      npm install
+      npm run build
+    command: |
+      cd frontend-react-js
+      npm start
 
 
