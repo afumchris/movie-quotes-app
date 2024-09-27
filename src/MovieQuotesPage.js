@@ -1,5 +1,9 @@
 import React from 'react';
 import { Film } from 'lucide-react';
+import mosesImage from './images/moses.jpg';
+import mcImage from './images/mc.jpg';
+import chrisImage from './images/chris.jpg';
+import casidyImage from './images/casidy.jpg';
 
 const QuoteCard = ({ image, quote, author, isGrayscale = true }) => {
   return (
@@ -7,7 +11,7 @@ const QuoteCard = ({ image, quote, author, isGrayscale = true }) => {
       <div className="flex flex-col items-center mb-4">
         <div className={`w-24 h-24 rounded-full overflow-hidden mb-3 ${isGrayscale ? 'grayscale' : ''}`}>
           <img
-            src={image || "/api/placeholder/96/96"}
+            src={image}
             alt={author}
             className="w-full h-full object-cover"
           />
@@ -34,38 +38,38 @@ function MovieItem({ title, rank }) {
 const MovieQuotesPage = () => {
   const quotes = [
     {
-      image: "/api/placeholder/96/96",
-      quote: "Without commitment, you'll never start. But more importantly, without consistency, you'll never finish.",
-      author: "Denzel Washington"
+      image: mosesImage,
+      quote: "All those moments will be lost in time, like tears in the rain.",
+      author: "Roy Batty, Blade Runner 1982"
     },
     {
-      image: "/api/placeholder/96/96",
-      quote: "Life is like a box of chocolates. You never know what you're gonna get.",
-      author: "Forrest Gump"
+      image: mcImage,
+      quote: "The best love is the kind that awakens the soul and makes us reach for more, that plants a fire in our hearts and brings peace to our minds. And that's what you've given me. That's what I hope to give to you forever.",
+      author: "Noah Calhoun, The Notebook"
     },
     {
-      image: "/api/placeholder/96/96",
-      quote: "May the Force be with you.",
+      image: chrisImage,
+      quote: "You either die a hero or you live long enough to see yourself become the villain.",
+      author: "Harvey Dent, The Dark Knight"
+    },
+    {
+      image: casidyImage,
+      quote: "This is the way.",
       author: "Star Wars"
-    },
-    {
-      image: "/api/placeholder/96/96",
-      quote: "I'll be back.",
-      author: "The Terminator"
     }
   ];
 
   const topMovies = [
-    "The Shawshank Redemption",
-    "The Godfather",
-    "The Dark Knight",
-    "12 Angry Men",
-    "Schindler's List",
-    "The Lord of the Rings: The Return of the King",
-    "Pulp Fiction",
-    "The Good, the Bad and the Ugly",
-    "Forrest Gump",
-    "Inception"
+    "Come and See, 1985",
+    "Paris Texas, 1984",
+    "Autumn Sonata, 1978",
+    "Memories of Murder, 2003",
+    "The Godfather, 1972",
+    "The Seventh Seal, 1957",
+    "Goodfellas, 1990",
+    "The Lord of the Rings: The Fellowship of the Ring, 2001",
+    "Persona, 1966",
+    "Harakiri, 1962"
   ];
 
   return (
@@ -82,7 +86,7 @@ const MovieQuotesPage = () => {
       </div>
       
       <div>
-        <h2 className="text-2xl font-semibold mb-4">Top Ten Movies This Month</h2>
+        <h2 className="text-2xl font-semibold mb-4">Top Ten Movies Of All Time by Moses Abetianbe </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {topMovies.map((movie, index) => (
             <MovieItem key={index} title={movie} rank={index + 1} />
