@@ -54,8 +54,8 @@ const MovieQuotesPage = () => {
     },
     {
       image: casidyImage,
-      quote: "This is the way.",
-      author: "Star Wars"
+      quote: "One often meets his destiny on the road he takes to avoid it.",
+      author: "Kung Fu Panda"
     }
   ];
 
